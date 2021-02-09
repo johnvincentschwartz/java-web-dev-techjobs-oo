@@ -4,16 +4,16 @@ import java.util.Objects;
 
 public class Employer {
     private int id;
-    private static int nextId = 1;
+    private static int nextId = 1; //static to keep value changes out of Employer objects themselves
     private String value;
 
     public Employer() {
         id = nextId;
-        nextId++;
+        nextId++; //increments id for next instance
     }
 
     public Employer(String value) {
-        this();
+        this(); //calls 1st constructor with incrementing id
         this.value = value;
     }
 
